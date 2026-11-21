@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroScene from '../components/HeroScene.astro';
+---
+
+<Base>
+  <main>
+    <section class="hero">
+      <HeroScene />
+      <div class="container hero-content">
+        <p class="eyebrow">Esteban Saa</p>
+        <h1>I build things that make people stop scrolling.</h1>
+        <p class="lede">
+          Placeholder intro: a sentence about what you do, who you help, and the kind of problems you love to solve.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Work with me</a>
+          <a class="btn" href="#work">See my work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="container section">
+      <h2>Selected work</h2>
+      <p class="muted">Projects coming soon.</p>
+    </section>
+
+    <section id="services" class="container section">
+      <h2>Consulting</h2>
+      <p class="muted">Services coming soon.</p>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Let's talk</h2>
+      <p class="muted">Contact details coming soon.</p>
+    </section>
+  </main>
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-block: 6rem;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin: 0 0 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    max-width: 14ch;
+    margin: 0;
+  }
+
+  .lede {
+    max-width: 38rem;
+    color: var(--muted);
+    font-size: 1.15rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid color-mix(in oklab, var(--fg) 25%, transparent);
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #06120d;
+  }
+
+  .section {
+    padding-block: 6rem;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin: 0 0 1rem;
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+</style>
